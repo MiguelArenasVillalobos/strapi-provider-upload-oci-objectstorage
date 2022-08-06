@@ -1,5 +1,5 @@
 {
-  "name": "@MiguelArenasVillalobos/strapi-provider-upload-oci-objectstorage",
+  "name": "strapi-provider-upload-oci-objectstorage",
   "version": "1.0.3-v3",
   "description": "OCI Object Storage provider for strapi upload",
   "keywords": [
@@ -27,9 +27,6 @@
   },
   "bugs": {
     "url": "https://github.com/MiguelArenasVillalobos/strapi-provider-upload-oci-objectstorage/issues"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/MiguelArenasVillalobos"
   },
   "maintainers": [
     {
