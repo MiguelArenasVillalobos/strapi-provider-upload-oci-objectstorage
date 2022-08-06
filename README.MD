@@ -11,14 +11,14 @@ We recommend you to use strapi v4
 
 If you still plan to use strapi version 3 you can use the following command to install this plugin:
 ```console
-foo@bar:my-strapi-project/$ npm install @miguelarenasvillalobos/strapi-provider-upload-oci-objectstorage@1.0.2-v3
+foo@bar:my-strapi-project/$ npm install strapi-provider-upload-oci-objectstorage@1.0.3-v3
 ```
 
 ---
 
 ## Install for v4 version of strapi
 ```console
-foo@bar:my-strapi-project/$ npm install @miguelarenasvillalobos/strapi-provider-upload-oci-objectstorage@1.0.2-v4
+foo@bar:my-strapi-project/$ npm install strapi-provider-upload-oci-objectstorage@1.0.3-v4
 ```
 
 ## Configurations
@@ -43,6 +43,37 @@ See the [using a provider](https://strapi.io/documentation/developer-docs/latest
 
 
 **Example**
+
+### for Strapi V4
+
+`./config/plugins.js`
+
+```js
+module.exports = ({ env }) => ({
+  // ...
+  upload: {
+    config: {
+      provider: 'strapi-provider-upload-oci-objectstorage',
+      providerOptions: {
+        tenancy: env('OCI_TENANCY_ID'),
+        user: env('OCI_USER_ID'),
+        fingerprint: env('OCI_FINGERPRINT'),
+        privateKeyFilePath: env('OCI_PRIVATE_KEY_FILE_PATH'),
+        passphrase: env('OCI_PASSPHRASE'),
+        region: env('OCI_REGION'),
+        bucket: env('OCI_BUCKET')
+      },
+      actionOptions: {
+        upload: {},
+        delete: {}
+      },
+    }
+  },
+  // ...
+});
+```
+
+### for Strapi V3
 
 `./config/plugins.js`
 
